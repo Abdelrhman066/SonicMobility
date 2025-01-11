@@ -33,3 +33,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.querySelectorAll('.faq-question').forEach((question) => {
+  question.addEventListener('click', () => {
+    const answer = question.nextElementSibling;
+
+    // Toggle the visibility of the answer
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+
+    // Smooth animation for height
+    if (answer.style.display === 'block') {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      answer.style.transition = 'max-height 0.4s ease-in-out';
+    } else {
+      answer.style.maxHeight = '0';
+    }
+
+    // Reset transition after toggling
+    setTimeout(() => {
+      answer.style.transition = '';
+    }, 400);
+  });
+});
