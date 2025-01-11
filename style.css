@@ -163,7 +163,7 @@ section.hero{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 40px;
+  gap: 100px;
   align-items: center;
   flex-wrap: wrap;
   min-height: 500px;
@@ -203,7 +203,7 @@ section.hero{
   .heroContainer{
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 10px !important;
     align-items: center;
     text-align: center;
   }
@@ -284,7 +284,7 @@ section.tag2{
 .feature{
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 100px;
   align-items: center;
   flex-wrap: wrap;
   margin: 50px auto;
@@ -344,7 +344,7 @@ object-fit: cover; /**********/
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 20px !important;
     align-items: center;
     flex-wrap: wrap;
     margin: 50px auto;
@@ -590,7 +590,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 20px;
+  gap: 40px;
   flex-wrap:wrap;
   
 }
@@ -603,7 +603,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 320px;
+  width: 330px;
   transition: 0.5s;
   position: relative;
 
