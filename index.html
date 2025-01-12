@@ -11,15 +11,21 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
     
 </head>
 <body>
 
-      <nav>
+      <nav class="animate__animated animate__fadeInLeft">
         <div class="container nav">
           <picture class="logo">
-            <img src="./Images/comp/sonic/Group 237796.png" alt="Logo">
+            <img src="./Images/comp/sonic/Group 237796.png" alt="Logo" >
           </picture>
           <button class="nav-toggle">
             <i class="bi bi-list"></i>
@@ -38,15 +44,15 @@
         </div>
       </nav>
       
-<section class="hero" id="hero">
+<section class="hero animate__animated animate__fadeInUp" id="hero">
   <div class="container heroContainer">
     
     <article>
       <h2>Lorem, ipsum dolor.</h2>
       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ipsam dolorem, ab enim et consequatur distinctio provident sed quas praesentium! </p>
     </article>
-    <picture>
-      <img src="./Images/IMG_3604.jpg" alt="">
+    <picture >
+      <img src="./Images/IMG_3604.jpg" alt="" >
     </picture>
   </div>
 </section>
@@ -89,6 +95,40 @@
   </div>
 </section>
 
+<section class="picsGrid" id="picsGrid">
+  <picture id="gridPic" onclick="focus">
+    <img id="gridImg" src="./Images/IMG_3553.jpg" alt="">
+  </picture>
+  <picture>
+    <img src="./Images/IMG_3555.jpg" alt="">
+  </picture>
+  <picture>
+    <img src="./Images/IMG_3617.jpg" alt="">
+  </picture>
+  <picture>
+    <img src="./Images/imgs/IMG_6724.JPG" alt="">
+  </picture>
+  <picture>
+    <img src="./Images/IMG_3555.jpg" alt="">
+  </picture>
+  <picture>
+    <img src="./Images/IMG_3553.jpg" alt="">
+  </picture>
+  <picture>
+    <img src="./Images/IMG_3555.jpg" alt="">
+  </picture>
+  <picture>
+    <img src="./Images/IMG_3617.jpg" alt="">
+  </picture>
+  <picture>
+    <img src="./Images/imgs/IMG_6724.JPG" alt="">
+  </picture>
+  <picture>
+    <img src="./Images/IMG_3555.jpg" alt="">
+  </picture>
+  
+</section>
+
 <section class="tag">
   <h2>Lorem ipsum dolor sit.</h2>
   <p>Enjoy flexible and eco-friendly transportation solutions with our convenient scooter sharing service.</p>
@@ -101,38 +141,41 @@
 
 
       <section class="feature container" id="features">
-        <div class="content">
+        <div class="content " data-aos="fade-right" >
           <h4 class="title">Why Choose Us</h4>
           <p class="subTitle">Lorem ipsum dolor sit amet.</p>
           <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum dignissimos nobis quae. Aut temporibus nisi enim eum! Accusamus quam deleniti consequatur nostrum tenetur aperiam odio nesciunt amet qui nulla?</p>
         </div>
-        <picture>
+        <picture data-aos="fade-left">
           <img src="./Images/imgs/IMG_6800.JPG" alt="no image">
         </picture>
       </section>
+
+
       <section class="feature container">
-        <div class="content">
+        <div class="content"data-aos="fade-left">
           <h4 class="title">Why Choose Us</h4>
           <p class="subTitle">Lorem ipsum dolor sit amet.</p>
           <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum dignissimos nobis quae. Aut temporibus nisi enim eum! Accusamus quam deleniti consequatur nostrum tenetur aperiam odio nesciunt amet qui nulla?</p>
         </div>
-        <picture>
+        <picture data-aos="fade-right">
           <img src="./Images/imgs/IMG_6814.JPG" alt="no image">
         </picture>
       </section>
+
       <section class="feature container">
-        <div class="content">
+        <div class="content " data-aos="fade-right">
           <h4 class="title">Why Choose Us</h4>
           <p class="subTitle">Lorem ipsum dolor sit amet.</p>
           <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum dignissimos nobis quae. Aut temporibus nisi enim eum! Accusamus quam deleniti consequatur nostrum tenetur aperiam odio nesciunt amet qui nulla?</p>
         </div>
-        <picture>
+        <picture data-aos="fade-left">
           <img src="./Images/imgs/IMG_6717.JPG" alt="no image">
         </picture>
       </section>
 
 
-      <section class="Feedback" id="feedback">
+      <section class="Feedback" id="feedback" data-aos="zoom-in">
         <h3>Application Feedback</h3>
         <p>Lorem ipsum dolor sit amet.</p>
         <div class="cards">
@@ -313,7 +356,7 @@
         <p>Easy steps to follow</p>
       </section>
 
-<section class="stepsSection" id="steps">
+<section class="stepsSection" id="steps" data-aos="zoom-out" >
   <!-- <h3>How To Use ??</h3>
   <p>Easy steps to follow</p> -->
   <div class="steps container">
@@ -376,14 +419,13 @@
 
 
 
-      <section class="faqs" id="faqs">
+      <!-- <section class="faqs" id="faqs">
         <picture>
           <img src="./Images/imgs/IMG_6776.JPG" alt="">
         </picture>
         <div class="FAQ">
           <h2 class="text-center mb-4"> Frequently Asked Questions</h2>
           <div class="accordion" id="faqAccordion">
-            <!-- FAQ Item 1 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -396,7 +438,6 @@
                 </div>
               </div>
             </div>
-            <!-- FAQ Item 2 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -416,7 +457,6 @@
                 </div>
               </div>
             </div>
-            <!-- FAQ Item 3 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -429,7 +469,6 @@
                 </div>
               </div>
             </div>
-            <!-- FAQ Item 4 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -442,7 +481,6 @@
                 </div>
               </div>
             </div>
-            <!-- FAQ Item 5 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFive">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -457,24 +495,31 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
 
-      <section class="faqs" id="faqs2">
-        <picture>
-          <img src="./Images/imgs/IMG_6776.JPG" alt="">
+      <section class="faqs" id="faqs2"  >
+        <picture class="faq-image">
+          <img src="./Images/imgs/IMG_6776.JPG" alt="FAQs related image">
         </picture>
-        
+      
         <div class="faq-container">
+          <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+      
           <div class="faq-item">
-            <div class="faq-question">What is Sonic Mobility?</div>
-            <div class="faq-answer">
-              Sonic Mobility is a mobile app that lets you easily rent scooters for quick, eco-friendly transportation around the city. abdo abdo  abdo abdo  abdo abdo  abdo abdo  abdo abdo  abdo abdo  
+            <button class="faq-question" aria-expanded="false">
+              What is Sonic Mobility?
+            </button>
+            <div class="faq-answer" aria-hidden="true">
+              Sonic Mobility is a mobile app that lets you easily rent scooters for quick, eco-friendly transportation around the city.
             </div>
           </div>
+      
           <div class="faq-item">
-            <div class="faq-question">How do I rent a scooter using the app?</div>
-            <div class="faq-answer">
+            <button class="faq-question" aria-expanded="false">
+              How do I rent a scooter using the app?
+            </button>
+            <div class="faq-answer" aria-hidden="true">
               Renting a scooter is simple:
               <ol>
                 <li>Download the Sonic Mobility app from your app store.</li>
@@ -485,13 +530,32 @@
               </ol>
             </div>
           </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What is Sonic Mobility?
+            </button>
+            <div class="faq-answer" aria-hidden="true">
+              Sonic Mobility is a mobile app that lets you easily rent scooters for quick, eco-friendly transportation around the city.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What is Sonic Mobility?
+            </button>
+            <div class="faq-answer" aria-hidden="true">
+              Sonic Mobility is a mobile app that lets you easily rent scooters for quick, eco-friendly transportation around the city.
+            </div>
+          </div>
         </div>
-        
-        
-
-
       </section>
       
+      
+      <section class="tag">
+        <h2>Applications Screens</h2>
+        <p>some screens of the real app </p>
+      </section>
 
       <section class="screens container">
         <div class="screen-carousel owl-carousel owl-theme">
@@ -534,7 +598,7 @@
         </div>
       </section>
 
-      <section class="download">
+      <section class="download" data-aos="flip-left">
         <h2>Let's Download  the App</h2>
         <div class="icons">
           <a href=""> <i class="bi bi-google-play"></i> <p>Play Store</p> </a>
@@ -545,7 +609,7 @@
       
       
 
-      <footer class="footer ">
+      <footer class="footer " data-aos="fade-up">
         <div class="footer-content container2">
             <div class="MainColumn">
                 <picture>
@@ -598,6 +662,16 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 120, // Offset from the viewport to trigger animations
+        duration: 800, // Animation duration
+        easing: 'ease-in-out', // Animation easing
+        delay: 0, // Delay before the animation starts
+        once: true // Animates only once when in view
+      });
+    </script>
 
 </body>
 </html>

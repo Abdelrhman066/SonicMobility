@@ -5,6 +5,7 @@
   --fourth-color:black;
 }
 /* 6666666666 */
+
 *{
   margin: 0;
   padding: 0;
@@ -40,6 +41,7 @@ var(--fourth-color)
 
 nav {
   background-color: var(--first-color);
+  /* background-color: black; */
   padding: 10px 20px;
 }
 
@@ -224,6 +226,44 @@ section.hero{
   margin: 30px auto;
 }
 
+.owl-nav {
+  position: absolute;
+  top: 50%; /* Center buttons vertically */
+  width: 100%; /* Make sure buttons span the carousel width */
+  display: flex;
+  justify-content: space-between; /* Place buttons on left and right */
+  transform: translateY(-50%); /* Center them perfectly */
+}
+
+.owl-prev, .owl-next {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark translucent background */
+  color: #fff; /* White text/icons */
+  font-size: 20px!important; /* Icon size */
+  border: none; /* Remove any default borders */
+  border-radius: 50% !important; /* Circular buttons */
+  width: 40px; /* Button size */
+  height: 40px; /* Button size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+.owl-prev:hover, .owl-next:hover {
+  background-color: var(--first-color) !important; /* Change to a lighter color on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.owl-prev {
+  left: -50px; /* Position to the left of the carousel */
+}
+
+.owl-next {
+  right: -50px; /* Position to the right of the carousel */
+}
+
 .owl-carousel .item {
   text-align: center;
   width: 250px;
@@ -235,6 +275,12 @@ section.hero{
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+@media (max-width:426px) {
+  .imagesSlider{
+    display: none !important;
+  }
 }
 
 /* images slider end */
@@ -378,6 +424,94 @@ object-fit: cover; /**********/
 
 
 /* feature end */
+
+
+/* Pictures grid start */
+/* Container grid */
+.picsGrid {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 426px) {
+  .picsGrid {
+    display: flex;
+  }
+}
+
+.picsGrid picture {
+  width: 100px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.picsGrid picture img {
+  object-fit: cover;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 0.3s ease;
+}
+
+/* Zoom-in animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+/* Pictures grid end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Feedback start */
@@ -615,7 +749,7 @@ a:hover {
 .step{
   border-radius: 15px;
   overflow: hidden;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0);
   background-color: var(--fourth-color);
   display: flex;
   flex-direction: column;
@@ -656,7 +790,7 @@ a:hover {
 }
 .step .instruct{
 padding: 16px 10px 0 ;
-background-color: rgba(0, 0, 0, 0.358);
+background-color: rgba(0, 0, 0, 0.769);
 }
 .step .instruct{
 
@@ -787,197 +921,118 @@ background-color: rgba(0, 0, 0, 0.358);
 /* faq start */
 /* FAQ Section Start */
 section.faqs {
-  padding: 50px 15px; 
+  padding: 50px 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 50px;
   flex-wrap: wrap;
-  background-image: url("/Images/imgs/IMG_6800.JPG");
+  gap: 20px;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("/Images/imgs/IMG_6800.JPG");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #000000aa;
-  background-blend-mode: overlay; 
+  color: white;
+  min-height: 900px;
 }
 
-.faqs picture {
+.faq-image {
   width: 400px;
   overflow: hidden;
   border-radius: 15px;
-  border: 1px solid white;
+  border: 2px solid white;
 }
 
-.faqs picture img {
+.faq-image img {
   width: 100%;
   object-fit: cover;
 }
 
-.faqs .FAQ {
-  width: 100%;
-  max-width: 600px;
-}
-
-.FAQ h2 {
-  color: var(--third-color);
-}
-
-/* Accordion Custom Styles */
-.accordion-item {
-  background-color: var(--first-color); 
-  border: none; 
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
-  margin-bottom: 15px; 
-}
-
-.accordion-item:last-child {
-  margin-bottom: 0; 
-}
-
-.accordion-header .accordion-button {
-  background-color: var(--second-color); 
-  color: white; /* Text color */
-  font-weight: bold;
-  border: none; 
-  border-radius: 10px; 
-  padding: 15px;
-  transition: background-color 0.3s ease, color 0.3s ease; 
-}
-
-.accordion-header .accordion-button:hover {
-  background-color: var(--first-color); 
-}
-
-.accordion-header .accordion-button:focus {
-  box-shadow: none; 
-}
-
-.accordion-header .accordion-button:not(.collapsed) {
-  background-color: var(--first-color); 
-  color: var(--third-color); 
-}
-
-.accordion-body {
-  background-color: var(--second-color);
-  color: white; 
-  border-radius: 0 0 10px 10px; 
-  padding: 15px;
-  line-height: 1.6; 
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .faqs {
-    gap: 30px; 
-  }
-
-  .faqs picture {
-    width: 300px; 
-  }
-
-  .faqs .FAQ {
-    max-width: 100%; 
-  }
-
-  .accordion-header .accordion-button {
-    font-size: 1rem;
-    padding: 10px; 
-  }
-
-  .accordion-body {
-    font-size: 0.9rem; 
-  }
-}
-
-@media (max-width: 480px) {
-  .faqs picture {
-    width: 100%; 
-  }
-
-  .faqs .FAQ {
-    max-width: 100%;
-    padding: 0 10px; 
-  }
-
-  .accordion-header .accordion-button {
-    font-size: 0.9rem; 
-    padding: 8px; 
-  }
-
-  .accordion-body {
-    font-size: 0.85rem; 
-  }
-}
-
-/****************************/
-section#faqs2 {
-  padding: 50px 15px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  flex-wrap: wrap;}
-  
 .faq-container {
-  max-width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
+  max-width: 600px;
 }
 
 .faq-item {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  max-width: 420px;/***********/
+  transition: 0.5s;
 }
 
 .faq-question {
   background-color: var(--first-color);
   color: white;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 18px;
   font-weight: bold;
   border-radius: 30px;
   cursor: pointer;
   text-align: center;
-  transition: background-color 0.3s ease-in-out;
+  border: none;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+
 }
 
-.faq-question:hover {
-  background-color:#b64714;
-  /* background-color:black;
-  border: 1px solid var(--first-color); */
+.faq-question:hover,
+.faq-question:focus {
+  background-color: #b64714;
+  transform: scale(1.02);
+  outline: none;
 }
 
 .faq-answer {
-  background-color: #ebebeb;
+  background-color: #f7f7f7;
   color: #333;
-  padding: 8px;
-  padding-bottom: 20px !important;
-  margin-top: 10px; /* Adds space between question and answer */
+  padding: 15px 20px;
+  margin-top: 10px;
   border-radius: 10px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ddd;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: none; /* Hidden by default */
-  line-height: 1.4;
-  /* transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out; */
-  transition:  0.4s;
-  padding-bottom: 10px;
-  height: auto !important;
+  display: none;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+.faq-answer.open {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  section.faqs {
+    padding: 30px 10px;
+  }
+
+  .faq-image {
+    width: 100%;
+  }
+
   .faq-question {
     font-size: 16px;
-    padding: 12px;
   }
 
   .faq-answer {
     font-size: 14px;
   }
 }
+
 
 
 

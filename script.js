@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
     autoplayHoverPause: false, // Pause auto-play on hover
     responsive: {
       0: {
-        items: 1            // 1 item for small screens (e.g., smartphones)
+        items: 1 ,           // 1 item for small screens (e.g., smartphones)
+        nav: true,  
       },
       600: {
         items: 2            // 2 items for medium screens (e.g., tablets)
@@ -33,24 +34,67 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.querySelectorAll('.faq-question').forEach((question) => {
-  question.addEventListener('click', () => {
+document.querySelectorAll(".faq-question").forEach((question) => {
+  question.addEventListener("click", () => {
     const answer = question.nextElementSibling;
+    const isOpen = question.getAttribute("aria-expanded") === "true";
 
-    // Toggle the visibility of the answer
-    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    // Close all open answers
+    document.querySelectorAll(".faq-answer.open").forEach((openAnswer) => {
+      openAnswer.classList.remove("open");
+      openAnswer.setAttribute("aria-hidden", "true");
+      openAnswer.previousElementSibling.setAttribute("aria-expanded", "false");
+    });
 
-    // Smooth animation for height
-    if (answer.style.display === 'block') {
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-      answer.style.transition = 'max-height 0.4s ease-in-out';
-    } else {
-      answer.style.maxHeight = '0';
+    // Toggle current answer
+    if (!isOpen) {
+      answer.classList.add("open");
+      answer.setAttribute("aria-hidden", "false");
+      question.setAttribute("aria-expanded", "true");
     }
-
-    // Reset transition after toggling
-    setTimeout(() => {
-      answer.style.transition = '';
-    }, 400);
   });
 });
+
+
+document.querySelectorAll('.picsGrid img').forEach((img) => {
+  img.addEventListener('click', (event) => {
+    // Create modal overlay
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+
+    // Create focused image
+    const focusedImg = document.createElement('img');
+    focusedImg.src = event.target.src; // Set source to the clicked image
+    modal.appendChild(focusedImg);
+
+    // Append modal to body
+    document.body.appendChild(modal);
+
+    // Show modal
+    modal.style.display = 'flex';
+
+    // Close modal on click outside the image
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        document.body.removeChild(modal);
+      }
+    });
+  });
+});
+
+
+AOS.init();
+// ---------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
