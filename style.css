@@ -62,6 +62,7 @@ nav {
   background-color: var(--first-color);
   /* background-color: black; */
   padding: 10px 20px;
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.881);
 }
 
 .container.nav {
@@ -157,6 +158,8 @@ nav .icons a:hover i{
     text-align: center;
     padding: 10px 0;
     align-items: flex-start;
+    /* box-shadow: 0px 2px 15px 2px rgba(255, 255, 255, 0.881); */
+    
 
   }
 
@@ -182,7 +185,15 @@ section.hero{
   margin: 0px auto ;
   padding: 25px 0;
 
-  background-color: var(--fourth-color);
+  /* background-color: var(--fourth-color); */
+  /* background-image: linear-gradient(to right  , black, var(--first-color) ); */
+  /* background-image: linear-gradient(to left  , black, var(--first-color) ); */
+  /* background-image: linear-gradient(to right, var(--first-color), black); */
+  /* background-image: linear-gradient(to left , var(--first-color) , black ); */
+  background-image: linear-gradient(to left, var(--first-color) 10%, rgb(0, 0, 0) 40%, black 90%);
+
+
+
   border-radius: 0 0 0 180px;
 }
 .heroContainer{
@@ -193,6 +204,7 @@ section.hero{
   align-items: center;
   flex-wrap: wrap;
   min-height: 580px;
+
   /* height:80vh; */
 }
 .hero picture{
@@ -203,7 +215,7 @@ section.hero{
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  box-shadow: 0px 0px 30px var(--first-color);
+  /* box-shadow: 0px 0px 30px var(--first-color); */
 
 }
 .hero picture img{
@@ -229,7 +241,37 @@ section.hero{
   line-height: 26px;
   color: white;
 }
+
+
+@media(max-width:1200px){
+
+  section.hero{
+    background-image: linear-gradient(to top, var(--first-color) 10%, rgb(0, 0, 0) 40%, black 90%);
+  }
+  
+  
+  .hero picture {
+    width: 370px;
+    height: 370px;
+    margin: 0 auto 30px;
+}
+.heroContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  text-align: center;
+
+}
+
+
+}
 @media(max-width:426px){
+
+  section.hero{
+    background-image: linear-gradient(to top, var(--first-color) 10%, rgb(0, 0, 0) 40%, black 90%);
+  }
   
   .heroContainer{
     flex-direction: column;
@@ -243,7 +285,11 @@ section.hero{
     height: 270px;
     margin: 0 auto 30px;
 }
+.hero article p{
 }
+}
+
+
 
 /* hero section end */
 
