@@ -131,6 +131,8 @@ nav .icons {
 nav .icons i{
   font-size: 22px;
   color: white;
+  transition: 0.4s ease;
+
 
 }
 
@@ -658,6 +660,7 @@ object-fit: cover; /**********/
 }
 .footer a{
   color: var(--third-color);
+  transition: 0.3s;
 }
 .footer a:hover{
   color: var(--first-color);
@@ -973,18 +976,6 @@ background-color: rgba(0, 0, 0, 0.769);
 
 
 /* download end */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
