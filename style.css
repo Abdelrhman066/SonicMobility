@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
 }
-html {
+/* html {
   margin: 0 !important;
   overflow-x: hidden !important;
 }
@@ -27,7 +27,17 @@ body {
     margin: 0 !important;
     overflow-x: hidden !important;
   }
+} */
+ 
+html{
+  margin: 0 !important;
+  overflow-x: hidden !important;
 }
+body {
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
 
 ul{
   margin: 0;
