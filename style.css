@@ -374,8 +374,13 @@ section.hero{
 section.tag{
   background-color: var(--first-color);
   text-align: center;
-  padding: 30px ;
+  padding: 60px ;
+}
+@media(max-width:768px){
+  section.tag{
 
+    padding: 30px ;
+  }
 }
 .tag h2{
   font-size: 35px;
@@ -639,10 +644,12 @@ object-fit: cover; /**********/
   width: 100%;
 }
 .person picture{
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
+  padding: 10px;
   overflow: hidden;
   border-radius: 50%;
+  background-color: #000000;
 }
 .person picture img{
   width: 100%;
@@ -875,6 +882,7 @@ a:hover {
 .step .instruct{
 padding: 16px 10px 0 ;
 background-color: rgba(0, 0, 0, 0.769);
+/* text-align: start; */
 }
 .step .instruct{
 
@@ -1066,7 +1074,7 @@ section.faqs {
   border: 1px solid #ddd;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: none;
-  line-height: 1.6;
+  line-height: 1.4;
   overflow: hidden;
 }
 
