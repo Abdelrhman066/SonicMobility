@@ -1025,7 +1025,8 @@ section.faqs {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url("/Images/imgs/img14.jpg");
+    url("./Images/imgs/img14.jpg");
+    /* url("/Images/imgs/img14.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
