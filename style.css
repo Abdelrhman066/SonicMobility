@@ -29,13 +29,20 @@ body {
   }
 } */
  
+
+
+
 html{
   margin: 0 !important;
   overflow-x: hidden !important;
 }
-body {
+/* body {
   margin: 0 !important;
   overflow: hidden !important;
+} */
+body {
+  margin: 0 !important;
+  overflow-x: hidden !important;
 }
 
 
@@ -73,7 +80,9 @@ nav {
   /* background-color: black; */
   padding: 10px 20px;
   box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.881);
+  width: 100%;
 }
+
 
 .container.nav {
   display: flex;
@@ -86,7 +95,7 @@ nav {
 nav .logo {
   margin-left: 0px;
   display: flex;
-  height: 50px;
+  height: 60px;
   overflow: hidden;
 }
 
@@ -94,9 +103,9 @@ nav .logo {
   height: 100%;
   object-fit: cover;
 }
-.logo img {
+/* .logo img {
   filter: invert(14%) brightness(23%) contrast(100%);
-}
+} */
 
 .nav-menu {
   padding-top: 10px;
@@ -160,13 +169,14 @@ nav .icons a:hover i{
 
   nav .myNav{
     position: fixed;
+    /* position: relative; */
   }
 
   .nav-menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 90px;
+    top: 80px;
     right: 0;
     background-color: var(--first-color);
     width: 100%;
@@ -1015,7 +1025,7 @@ section.faqs {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url("/Images/imgs/IMG_6800.JPG");
+    url("/Images/imgs/img14.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -1122,4 +1132,8 @@ section.faqs {
 
 /* faq end */
 
+
+.Using{
+  margin-top: 100px;
+}
 /*****Test******/
